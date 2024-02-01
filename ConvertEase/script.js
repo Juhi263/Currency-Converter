@@ -28,9 +28,17 @@ function calculate(){
         output_to.innerText = `${to_amount} ${to_currency_value}`;
         output_amount.style.display="block";
     })
+    .catch(error => {
+        console.error("Error fetching exchange rate:", error);
+        exchange_rate.value = "N/A";
+        output_amount.style.display = "none";
+    });
 }
 
 
 document.getElementById("exchange_button").addEventListener("click",()=>{
     calculate();
+});
+document.addEventListener("DOMContentLoaded", () => {
+    calculate(); // Fetch exchange rate on page load
 });
