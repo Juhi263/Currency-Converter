@@ -108,3 +108,7 @@ a{
     font-size: 30px;
     text-decoration: none;
 }
+button:hover {
+    background-color: #FFD662FF;
+    color: #00539CFF;
+}
